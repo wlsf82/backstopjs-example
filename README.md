@@ -26,8 +26,8 @@ $ npm i backstopjs -D
 #### Update the .gitignore file with the following content:
 ```
 node_modules
-backstop_data/bitmaps_test
-backstop_data/html_report
+backstop_data/bitmaps_test/
+backstop_data/html_report/
 ```
 
 #### Run the following command to create the basic backstopjs structure:
