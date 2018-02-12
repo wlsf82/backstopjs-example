@@ -38,6 +38,7 @@
       "url": "https://garris.github.io/BackstopJS/",
       "selectors": ["#theLemur"],
       "readySelector": "#theLemur",
+      "removeSelectors": [".BackstopJS3"],
       "misMatchThreshold" : 0.1,
       "requireSameDimensions": true
     }

@@ -172,7 +172,31 @@ Note: tests should pass again!
 
 Note 2: the new test compares only the specified component, in this case, the element with `id` equal to `theLemur`.
 
-Commit this last changes to have your project updated with the new test scenario.
+Commit this new changes to have your project updated with the new test scenario.
+```
+$ git add .
+$ git commit -m 'update project with test for specific component'
+```
+
+### Removing a selector from the comparison:
+
+Sometimes, due to dynamic content we may want to not consider a specific selector when during the visual comparison. Another reason for not considering a specific selector can be because it is interfering in the tests of another specific component.
+
+Update the newest test scenario on `backstop.json` file with the following code right below the `"readySelector": "#theLemur",` line:
+
+`"removeSelectors": [".BackstopJS3"],`
+
+#### Run tests again:
+`$ npm run test:visual`
+
+Note: the updated test should fail because the bitmap reference has part of the element that is being removed from the test, so that it needs to be updated.
+
+#### Approve the bitmap reference and re-run the tests:
+`$ npm run test:visual:approve && npm run test:visual`
+
+Note: tests should pass again!
+
+Commit this last changes to have your project updated not considering the removed selector in the test of the specific component.
 ```
 $ git add .
 $ git commit -m 'update project with test for specific component'
