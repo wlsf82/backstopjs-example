@@ -1,0 +1,21 @@
+{
+  "name": "backstopjs-example",
+  "version": "1.0.0",
+  "description": "Example project to demonstrate visual regression testing with BackstopJS",
+  "main": "index.js",
+  "scripts": {
+    "test:visual": "rm -rf backstop_data/bitmaps_test && backstop test",
+    "test:visual:approve": "backstop approve"
+  },
+  "keywords": [
+    "backstopjs",
+    "visual",
+    "regression",
+    "testing"
+  ],
+  "author": "Walmyr Filho <wlsf82@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "backstopjs": "^3.0.39"
+  }
+}
