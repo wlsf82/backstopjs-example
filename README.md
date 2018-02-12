@@ -64,7 +64,7 @@ backstop.json
 ### Run the tests for the first time:
 `$ npm run test:visual`
 
-Note: tests will fail since there are not bitmap references to compare.
+Note: tests will fail since there are no bitmap references to compare.
 
 ### Approve bitmap references and re-run tests:
 `$ npm run test:visual:approve && npm run test:visual`
@@ -93,6 +93,8 @@ On `backstop.json` file, below the `engine` configuration, add the following:
 
 Note: any other flag can be set the same way.
 
+Note 2: change `backstop.json` file back to its origial state after experimenting with this.
+
 ### Emulating a mobile device:
 On `backstop_data/engine_scripts/chromy/onBefore.js`:
 
@@ -115,7 +117,10 @@ module.exports = function (chromy, scenario, vp) {
 ```
 
 Note: this will set things such as the `userAgent`.
-Note 2: It's also possible to set a custom device. See how to do it here: https://github.com/garris/BackstopJS#using-chromy-static-functions
+
+Note 2: it's also possible to set a custom device. See how to do it here: https://github.com/garris/BackstopJS#using-chromy-static-functions
+
+Note 3: change `backstop_data/engine_scripts/chromy/onBefore.js` file back to its origial state after experimenting with this.
 
 ### Interacting with the application before tests start running to create the desired application state:
 Edit the file `backstop_data/engine_scripts/chromy/onReady.js` with the following code:
@@ -137,8 +142,10 @@ By default backstop will set the following configuration on `backstop.json` file
 
 So, by editing such file with chromy's command, we set a specific application state before the bitmap comparison of every test is run.
 
-Note: onReadyScript, as well as onBeforeScript, can also be set to specific test scenarios, to generate a specific scenario state.
+Note: `onReadyScript`, as well as `onBeforeScript`, can also be set to specific test scenarios, to generate a specific scenario state.
 Detailed information about this can be found here: https://github.com/garris/BackstopJS#running-custom-scripts
+
+Note 2: change `backstop_data/engine_scripts/chromy/onReady.js` file back to its origial state after experimenting with this.
 
 ### Testing specific components:
 Add the following new scenario to the `backstop.json` file:
@@ -162,7 +169,13 @@ Note: the new test should fail since there is no bitmap reference to compare.
 `$ npm run test:visual:approve && npm run test:visual`
 
 Note: tests should pass again!
-Note 2: The new test compares only the specified component, in this case, the element with `id` equal to `theLemur`.
 
+Note 2: the new test compares only the specified component, in this case, the element with `id` equal to `theLemur`.
+
+Commit this last changes to have your project updated with the new test scenario.
+```
+$ git add .
+$ git commit -m 'update project with test for specific component'
+```
 ___
 Read the complete documentation of BackstopJS here: https://github.com/garris/BackstopJS
