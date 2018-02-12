@@ -165,7 +165,7 @@ Add the following new scenario to the `backstop.json` file:
 
 Note: the new test should fail since there is no bitmap reference to compare.
 
-#### Approve bitmap reference and re-run the tests:
+#### Approve the bitmap reference and re-run the tests:
 `$ npm run test:visual:approve && npm run test:visual`
 
 Note: tests should pass again!
