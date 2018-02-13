@@ -12,6 +12,10 @@
             "error",
             "as-needed"
         ],
+        "arrow-parens": [
+            "error",
+            "as-needed"
+        ],
         "indent": [
             "error",
             4
@@ -28,7 +32,6 @@
             "error",
             "always"
         ],
-        "arrow-parens": 0,
         "no-var": 1,
         "one-var": 0,
         "prefer-const": 1,
