@@ -1,6 +1,6 @@
 # Visual regression testing with BackstopJS
 ## Basics:
-Go to this URL, download and install the  latest version of NodeJS compatible with your operating system: https://nodejs.org
+Go to this URL, download and install the  latest LTS version of NodeJS compatible with your operating system: https://nodejs.org
 
 Run the below commands to check the NodeJS and NPM versions:
 ```
