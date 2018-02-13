@@ -9,7 +9,7 @@ module.exports = function (casper, timeout) {
                 selector,
                 () => {},
                 () => {
-                    // console.error("NOT FOUND > " + selector);
+                    console.error("NOT FOUND > " + selector); // eslint-disable-line no-console
                 },
                 TIMEOUT
             );
