@@ -4,6 +4,8 @@
   "description": "Example project to demonstrate visual regression testing with BackstopJS",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint backstop_data/engine_scripts/*.js && npx eslint backstop_data/engine_scripts/**/*.js",
+    "lint:fix": "eslint backstop_data/engine_scripts/*.js --fix && npx eslint backstop_data/engine_scripts/**/*.js --fix",
     "test:visual": "rm -rf backstop_data/bitmaps_test && backstop test",
     "test:visual:approve": "backstop approve"
   },
@@ -16,6 +18,7 @@
   "author": "Walmyr Filho <wlsf82@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "backstopjs": "^3.0.39"
+    "backstopjs": "^3.0.39",
+    "eslint": "^4.17.0"
   }
 }
