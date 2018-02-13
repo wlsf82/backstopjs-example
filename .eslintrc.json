@@ -8,6 +8,10 @@
         "sourceType": "module"
     },
     "rules": {
+        "arrow-body-style": [
+            "error",
+            "as-needed"
+        ],
         "indent": [
             "error",
             4
