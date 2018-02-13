@@ -32,9 +32,9 @@
             "error",
             "always"
         ],
-        "no-var": 1,
+        "no-var": 2,
         "one-var": 0,
-        "prefer-const": 1,
+        "prefer-const": 2,
         "prefer-arrow-callback": 2
     }
 }
