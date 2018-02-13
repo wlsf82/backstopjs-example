@@ -7,7 +7,7 @@ module.exports = function (chromy, scenario) {
         chromy
             .wait(hoverSelector)
             .rect(hoverSelector)
-            .result((rect) => chromy.mouseMoved(rect.left, rect.top));
+            .result(rect => chromy.mouseMoved(rect.left, rect.top));
     }
 
     if (clickSelector) {
