@@ -16,7 +16,7 @@ Run the below commands to create an example project to work on:
 $ mkdir backstopjs-example
 $ cd backstopjs-example
 $ git init
-$ npm init
+$ npm init // press ENTER for each question to answer them with the default values
 $ npm i backstopjs -D
 ```
 
