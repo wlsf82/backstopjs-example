@@ -54,7 +54,7 @@ backstop.json
 ```
 
 #### Update package.json with the following scripts:
-```
+```js
 "scripts": {
     "test:visual": "rm -rf backstop_data/bitmaps_test && backstop test",
     "test:visual:approve": "backstop approve"
@@ -82,7 +82,7 @@ Note: with this configuration tests will be executed in Chrome.
 ## Going forward:
 ### Setting Chrome flags to simulate and let browser uses a fake media stream device:
 On `backstop.json` file, below the `engine` configuration, add the following:
-```
+```js
 "engineOptions": {
     "chromeFlags": [
         "--use-fake-ui-for-media-stream",
@@ -99,7 +99,7 @@ Note 2: change `backstop.json` file back to its origial state after experimentin
 On `backstop_data/engine_scripts/chromy/onBefore.js`:
 
 #### Add the following to emulate an Android mobile device:
-```
+```js
 module.exports = function (chromy, scenario, vp) {
     if(vp.label === "phone") {
         chromy.emulate("Nexus6P");  
@@ -108,7 +108,7 @@ module.exports = function (chromy, scenario, vp) {
 ```
 
 #### Or add the following to emulate an iPhone device:
-```
+```js
 module.exports = function (chromy, scenario, vp) {
     if(vp.label === "phone") {
         chromy.emulate("iPhone6");
@@ -124,7 +124,7 @@ Note 3: change `backstop_data/engine_scripts/chromy/onBefore.js` file back to it
 
 ### Interacting with the application before tests start running to create the desired application state:
 Edit the file `backstop_data/engine_scripts/chromy/onReady.js` with the following code:
-```
+```js
 module.exports = function (chromy, scenario, vp) {
     console.log('SCENARIO > ' + scenario.label);
     require('./clickAndHoverHelper')(chromy, scenario);
@@ -149,7 +149,7 @@ Note 2: change `backstop_data/engine_scripts/chromy/onReady.js` file back to its
 
 ### Testing specific components:
 Add the following new scenario to the `backstop.json` file:
-```
+```js
 {
     "label": "BackstopJS logo",
     "url": "https://garris.github.io/BackstopJS/",
